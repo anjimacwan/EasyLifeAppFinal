@@ -29,11 +29,11 @@
         app:showAsAction="ifRoom"
         android:title="@string/action_delete"/>
     <!-- Share button -->
-    <item
+    <!--<item
         android:id="@+id/action_share"
         android:icon="@drawable/ic_action_share"
         android:orderInCategory="100"
         app:showAsAction="ifRoom"
-        android:title="@string/action_share"/>
+        android:title="@string/action_share"/>-->
 
 </menu>

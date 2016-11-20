@@ -1,5 +1,6 @@
 /* Copyright 2014 Braden Farmer
  * Copyright 2015 Sean93Park
+ * Copyright 2016 COMP231 Team 6 - Anjali Macwan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -220,22 +221,24 @@ NoteViewFragment.Listener {
     @Override
     public boolean dispatchKeyShortcutEvent(KeyEvent event) {
         super.dispatchKeyShortcutEvent(event);
-        if(event.getAction() == KeyEvent.ACTION_DOWN && event.isCtrlPressed()) {
-            if(getSupportFragmentManager().findFragmentById(R.id.noteViewEdit) instanceof NoteListFragment) {
-                NoteListFragment fragment = (NoteListFragment) getSupportFragmentManager().findFragmentByTag("NoteListFragment");
-                fragment.dispatchKeyShortcutEvent(event.getKeyCode());
-            } else if(getSupportFragmentManager().findFragmentById(R.id.noteViewEdit) instanceof NoteViewFragment) {
-                NoteViewFragment fragment = (NoteViewFragment) getSupportFragmentManager().findFragmentByTag("NoteViewFragment");
-                fragment.dispatchKeyShortcutEvent(event.getKeyCode());
-            } else if(getSupportFragmentManager().findFragmentById(R.id.noteViewEdit) instanceof NoteEditFragment) {
-                NoteEditFragment fragment = (NoteEditFragment) getSupportFragmentManager().findFragmentByTag("NoteEditFragment");
-                fragment.dispatchKeyShortcutEvent(event.getKeyCode());
-            } else if(getSupportFragmentManager().findFragmentById(R.id.noteViewEdit) instanceof WelcomeFragment) {
-                WelcomeFragment fragment = (WelcomeFragment) getSupportFragmentManager().findFragmentByTag("NoteListFragment");
-                fragment.dispatchKeyShortcutEvent(event.getKeyCode());
-            }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            if(event.getAction() == KeyEvent.ACTION_DOWN && event.isCtrlPressed()) {
+                if(getSupportFragmentManager().findFragmentById(R.id.noteViewEdit) instanceof NoteListFragment) {
+                    NoteListFragment fragment = (NoteListFragment) getSupportFragmentManager().findFragmentByTag("NoteListFragment");
+                    fragment.dispatchKeyShortcutEvent(event.getKeyCode());
+                } else if(getSupportFragmentManager().findFragmentById(R.id.noteViewEdit) instanceof NoteViewFragment) {
+                    NoteViewFragment fragment = (NoteViewFragment) getSupportFragmentManager().findFragmentByTag("NoteViewFragment");
+                    fragment.dispatchKeyShortcutEvent(event.getKeyCode());
+                } else if(getSupportFragmentManager().findFragmentById(R.id.noteViewEdit) instanceof NoteEditFragment) {
+                    NoteEditFragment fragment = (NoteEditFragment) getSupportFragmentManager().findFragmentByTag("NoteEditFragment");
+                    fragment.dispatchKeyShortcutEvent(event.getKeyCode());
+                } else if(getSupportFragmentManager().findFragmentById(R.id.noteViewEdit) instanceof WelcomeFragment) {
+                    WelcomeFragment fragment = (WelcomeFragment) getSupportFragmentManager().findFragmentByTag("NoteListFragment");
+                    fragment.dispatchKeyShortcutEvent(event.getKeyCode());
+                }
 
-            return true;
+                return true;
+            }
         }
         return super.dispatchKeyShortcutEvent(event);
     }

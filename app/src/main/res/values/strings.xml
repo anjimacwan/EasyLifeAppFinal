@@ -6,7 +6,7 @@
      You may obtain a copy of the License at
   
           http://www.apache.org/licenses/LICENSE-2.0
-  
+
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -29,11 +29,11 @@
     <string name="action_settings">Settings</string>
     <string name="action_share">Share</string>
     <string name="action_sort_by">Sort notes by</string>
-    <string name="app_name">Notepad</string>
+    <string name="app_name">EasyLife</string>
     <string name="cab_note_selected">note selected</string>
     <string name="cab_notes_selected">notes selected</string>
     <string name="changes_discarded">Changes discarded</string>
-    <string name="dialog_about_message">Notepad: a simple note-taking app\n\n&#169; 2016 Braden Farmer\n\nThis app\'s <a href="http://github.com/farmerbb/Notepad">source code</a> is licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2.0</a>, except where noted below:\n\nThis app uses graphical assets from the following sources:\n\n&#8226; <a href="http://deleket.deviantart.com">Notepad icon (deleket)</a> <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/legalcode">(CC BY-NC-ND 3.0)</a></string>
+    <string name="dialog_about_message">EasyLife: A helping hand for your routine tasks created by \n\n&#169; 2016 COMP 231 Team 6 </string>
     <string name="dialog_about_title">About Notepad</string>
     <string name="dialog_are_you_sure">Are you sure?</string>
     <string name="dialog_delete_button_title">Delete note</string>
@@ -74,7 +74,8 @@
     <string name="pref_title_show_date">Show date/time</string>
     <string name="action_theme">Theme</string>
     <string name="pref_title_direct_edit">Edit notes directly</string>
-    <string name="pref_title_markdown">Markdown/HTML support</string>
+    <string name="pref_title_markdown">Markdown/HTM
+        L support</string>
     <string name="new_note_long">Compose a new note using Notepad</string>
     <string name="new_note_disabled">Shortcut is disabled</string>
 
