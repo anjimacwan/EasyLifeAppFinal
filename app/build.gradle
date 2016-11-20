@@ -1,0 +1,40 @@
+apply plugin: 'android-sdk-manager'
+apply plugin: 'com.android.application'
+
+ext {
+    SUPPORT_LIBRARY_VERSION = "25.0.0"
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        applicationId "com.anjalimacwan"
+        minSdkVersion 9
+        targetSdkVersion 25
+
+        versionCode 92
+        versionName "2.2.4"
+
+        resConfigs "en", "fr", "ko", "nl", "pl", "zh-rCN"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles 'proguard-android.txt'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
+    compile "com.android.support:design:${SUPPORT_LIBRARY_VERSION}"
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'us.feras.mdv:markdownview:1.1.0'
+}
