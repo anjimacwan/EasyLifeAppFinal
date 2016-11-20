@@ -503,7 +503,7 @@ public class NoteViewFragment extends Fragment {
                 return true;
 
                 // Share menu item
-            case R.id.action_share:
+            /*case R.id.action_share:
                 // Send a share intent
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_SEND);
@@ -514,7 +514,7 @@ public class NoteViewFragment extends Fragment {
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null)
                     startActivity(Intent.createChooser(intent, getResources().getText(R.string.send_to)));
 
-                return true;
+                return true;*/
             default:
                 return super.onOptionsItemSelected(item);
         }

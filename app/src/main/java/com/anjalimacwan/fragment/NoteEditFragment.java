@@ -432,7 +432,7 @@ public class NoteEditFragment extends Fragment {
                 return true;
 
                 // Share menu item
-            case R.id.action_share:
+            /*case R.id.action_share:
                 // Set current note contents to a String
                 contents = noteContents.getText().toString();
 
@@ -451,7 +451,7 @@ public class NoteEditFragment extends Fragment {
                         startActivity(Intent.createChooser(intent, getResources().getText(R.string.send_to)));
                 }
 
-                return true;
+                return true;*/
             default:
                 return super.onOptionsItemSelected(item);
         }
