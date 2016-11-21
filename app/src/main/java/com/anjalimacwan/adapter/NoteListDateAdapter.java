@@ -1,4 +1,4 @@
-/* Copyright 2014 Braden Farmer
+/* Copyright 2016 COMP231 Team 6 - Anjali Macwan
  * Copyright 2015 Sean93Park
  *
  * Licensed under the Apache License, Version 2.0 (the "License");

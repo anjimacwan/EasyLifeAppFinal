@@ -1,4 +1,4 @@
-/* Copyright 2014 Braden Farmer
+/* Copyright 2016 COMP231 Team 6 - Anjali Macwan
  * Copyright 2015 Sean93Park
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,11 +19,6 @@ package com.anjalimacwan.fragment;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ActivityManager;
-import android.content.ActivityNotFoundException;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -31,6 +26,10 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
@@ -50,9 +49,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.anjalimacwan.MainActivity;
 import com.anjalimacwan.R;
-import com.anjalimacwan.activity.SettingsActivity;
 import com.anjalimacwan.adapter.NoteListAdapter;
 import com.anjalimacwan.adapter.NoteListDateAdapter;
 import com.anjalimacwan.fragment.dialog.AboutDialogFragment;
@@ -242,12 +239,12 @@ public class NoteListFragment extends Fragment {
             inflater.inflate(R.menu.main, menu);
     }
 
-    @TargetApi(Build.VERSION_CODES.KITKAT)
+    //@TargetApi(Build.VERSION_CODES.KITKAT)
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle presses on the action bar items
         switch(item.getItemId()) {
-            case R.id.action_settings:
+            /*case R.id.action_settings:
                 Intent intentSettings = new Intent(getActivity(), SettingsActivity.class);
                 startActivity(intentSettings);
                 return true;
@@ -256,14 +253,14 @@ public class NoteListFragment extends Fragment {
                 intent.addCategory(Intent.CATEGORY_OPENABLE);
                 intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
                 intent.putExtra(Intent.EXTRA_MIME_TYPES, new String[] {"text/plain", "text/html", "text/x-markdown"});
-                intent.setType("*/*");
+                intent.setType("*//*");
 
                 try {
                     getActivity().startActivityForResult(intent, MainActivity.IMPORT);
                 } catch (ActivityNotFoundException e) {
                     showToast(R.string.error_importing_notes);
                 }
-                return true;
+                return true;*/
             case R.id.action_about:
                 DialogFragment aboutFragment = new AboutDialogFragment();
                 aboutFragment.show(getFragmentManager(), "about");
