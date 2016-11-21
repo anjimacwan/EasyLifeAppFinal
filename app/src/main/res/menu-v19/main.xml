@@ -16,7 +16,7 @@ limitations under the License.
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item
+    <!--<item
         android:id="@+id/action_settings"
         app:showAsAction="never"
         android:title="@string/action_settings" />
@@ -24,7 +24,7 @@ limitations under the License.
     <item
         android:id="@+id/action_import"
         app:showAsAction="never"
-        android:title="@string/import_notes" />
+        android:title="@string/import_notes" />-->
 
     <item
         android:id="@+id/action_about"
