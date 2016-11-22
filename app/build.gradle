@@ -32,9 +32,12 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    'com.android.support:support-v4:18.0.0'
+    compile 'com.loopj.android:android-async-http:1.4.9'
 
     compile "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
     compile "com.android.support:design:${SUPPORT_LIBRARY_VERSION}"
     compile 'org.apache.commons:commons-lang3:3.4'
     compile 'us.feras.mdv:markdownview:1.1.0'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
 }

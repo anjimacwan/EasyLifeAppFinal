@@ -94,6 +94,8 @@ public class WelcomeFragment extends Fragment {
                     .commit();
         } else {
             // Change window title
+
+
             String title = getResources().getString(R.string.app_name);
 
             getActivity().setTitle(title);

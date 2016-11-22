@@ -97,5 +97,6 @@
         <item>Large</item>
         <item>Largest</item>
     </string-array>
+    <string name="title_activity_navigation">Navigation</string>
 
 </resources>
