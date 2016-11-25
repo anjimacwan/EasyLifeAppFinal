@@ -1,5 +1,6 @@
 package com.anjalimacwan.activity;
 
+import android.content.DialogInterface;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -8,6 +9,7 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -290,6 +292,28 @@ public class MapActivity extends AppCompatActivity implements LocationListener {
                 }
                 // display the results in textview txtDirections
                 answer.setText(directions);
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(getApplicationContext());
+                builder1.setMessage(directions);
+                builder1.setCancelable(true);
+
+                builder1.setPositiveButton(
+                        "Ok",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+                builder1.setNegativeButton(
+                        "Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alert11 = builder1.create();
+                alert11.show();
 
             } catch (Exception e) {
                 // TODO Auto-generated catch block
