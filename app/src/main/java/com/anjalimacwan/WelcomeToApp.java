@@ -31,7 +31,7 @@ public class WelcomeToApp extends AppCompatActivity {
 
     public void openMoneyTracker(View view)
     {
-        Intent intent = new Intent(this,MoneyTracker.class);
+        Intent intent = new Intent(this,MoneyTrackerHome.class);
         startActivity(intent);
     }
 

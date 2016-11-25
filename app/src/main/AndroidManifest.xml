@@ -80,8 +80,18 @@
                 <category android:name="android.intent.category.APP_MAPS" />
             </intent-filter>
         </activity>
+        <activity android:name="com.anjalimacwan.MoneyTrackerHome"/>
+        <activity android:name="com.anjalimacwan.ExpenseEdit" android:label="@string/label_expense_edit"/>
         <activity android:name=".activity.MoneyTracker" />
         <activity android:name=".activity.Reminder" />
+        <receiver android:name="com.anjalimacwan.MoneyTrackerWidgetProvider"
+            android:label="@string/widget_label" android:icon="@drawable/icon">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
         <activity android:name=".activity.MapActivity" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
         <meta-data
